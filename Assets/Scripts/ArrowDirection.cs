@@ -14,7 +14,7 @@ public class ArrowDirection : MonoBehaviour
         Vector3 targetEulerAngles = targetRot.eulerAngles;
         float rotationToApplyAroundY = targetEulerAngles.y;
         float newCamRotAngleY = Mathf.LerpAngle(transform.eulerAngles.y, rotationToApplyAroundY, rotationSmoothingSpeed * Time.deltaTime);
-        Quaternion newCamRotYQuat = Quaternion.Euler(0, newCamRotAngleY + 270f , 0);
+        Quaternion newCamRotYQuat = Quaternion.Euler(0, newCamRotAngleY, 0);
         arrow.transform.rotation = newCamRotYQuat;
     }
 }
